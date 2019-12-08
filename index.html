@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <form class="form1" name="form1" onsubmit="check()" action="#" method="get"> 
+        <form class="form1" name="form1" onsubmit="check()" action="index.php" method="post"> 
             <div class="banner">
             <h1>Information Form</h1>
             </div>
@@ -22,12 +22,12 @@
                 <div class="colums">
                     <div class="item">
                         <label for="fname">First Name<span>*</span></label>
-                        <input id="input" type="text" name="fname"/>
+                        <input class="input" type="text" name="fname"/>
                     </div>
                     
                     <div class="item">
                         <label for="lname">Last Name<span>*</span></label>
-                        <input id="input" type="text" name="lname"/>
+                        <input class="input" type="text" name="lname"/>
                     </div>
 
                     <div class="item">
@@ -39,7 +39,7 @@
 
                     <div class="item">
                         <label for="age">Age<span>*</span></label>
-                        <input id="input" type="number" name="age" min="20" max="80"/>
+                        <input class="input" type="number" name="age" min="20" max="80"/>
                     </div>
                 </div>
             </fieldset>
@@ -52,7 +52,7 @@
 
                     <div class="item">
                         <label for="cp">Chest-pain type<span>*</span></label><br>
-                        <select name="cp" id="input" required>
+                        <select name="cp" class="input" required>
                             <option value="">Choose...</option>
                             <option value="0">Typical Angina</option>
                             <option value="1">Atypical Angina</option>
@@ -63,13 +63,13 @@
 
                     <div class="item">
                         <label for="trestbps">Resting Blood Pressure<span>*</span></label>
-                        <input id="input" type="number" name="trestbps" placeholder="Value of blood pressure in mmHg"
+                        <input class="input" type="number" name="trestbps" placeholder="Value of blood pressure in mmHg"
                             min="70" max="220"/>
                     </div>
 
                     <div class="item">
                         <label for="fbs">Fasting Blood Sugar<span>*</span></label>
-                        <select name="fbs" id="input" required>
+                        <select name="fbs" class="input" required>
                             <option value="">Choose...</option>
                             <option value="1">Fasting Blood Sugar more than 120mg/dl</option>
                             <option value="0">Fasting Blood Sugar less than 120mg/dl</option>
@@ -78,13 +78,13 @@
 
                     <div class="item">
                         <label for="chol">Serum Cholestrol<span>*</span></label>
-                        <input id="input" type="number" name="chol" placeholder="Value of serum cholestrol in mg/dl"
+                        <input class="input" type="number" name="chol" placeholder="Value of serum cholestrol in mg/dl"
                             min="100" max="600"/>
                     </div>
     
                     <div class="item">
                         <label for="restecg">Resting ECG<span>*</span></label>
-                        <select name="restecg" id="input" required>
+                        <select name="restecg" class="input" required>
                             <option value="">Choose...</option>
                             <option value="0">Normal</option>
                             <option value="1">Having ST-T wave abnormality</option>
@@ -94,13 +94,13 @@
 
                     <div class="item">
                         <label for="thalach">Maximum heart rate achieved<span>*</span></label>
-                        <input id="input" type="number" name="thalach" placeholder="Value of maximum heart rate achieved"
+                        <input class="input" type="number" name="thalach" placeholder="Value of maximum heart rate achieved"
                             min="70" max="210"/>
                     </div>
 
                     <div class="item">
                         <label for="exang">Exercise induced angina<span>*</span></label>
-                        <select name="exang" id="input" required>
+                        <select name="exang" class="input" required>
                             <option value="1">Yes</option>
                             <option value="0">No</option>
                         </select>
@@ -108,13 +108,13 @@
                     
                     <div class="item">
                         <label for="oldpeak">ST depression induced by exercise relative to rest<span>*</span></label>
-                        <input id="input" type="number" name="oldpeak" placeholder="Value of ST depression"
+                        <input class="input" type="number" name="oldpeak" placeholder="Value of ST depression"
                             step="0.01" min="0" max="6.5"/>
                     </div>
 
                     <div class="item">
                         <label for="slope">Peak exercise ST segment<span>*</span></label>
-                        <select name="slope" id="input" required>
+                        <select name="slope" class="input" required>
                             <option value="">Choose...</option>
                             <option value="0">Upsloping</option>
                             <option value="1">Flat</option>
@@ -125,7 +125,7 @@
 
                     <div class="item">
                         <label for="ca">Number of major vessels colored by flourosopy<span>*</span></label>
-                        <select name="ca" id="input" required>
+                        <select name="ca" class="input" required>
                             <option value="">Choose...</option>
                             <option value="0">0</option>
                             <option value="1">1</option>
@@ -137,10 +137,10 @@
 
                     <div class="item">
                             <label for="thal">Thallium Stress Test<span>*</span></label>
-                            <select name="thal" id="input" required>
-                                <option value="1">Normal</option>
-                                <option value="2">Fixed Detect</option>
-                                <option value="3">Reversible defect</option>
+                            <select name="thal" class="input" required>
+                                <option value="0">Normal</option>
+                                <option value="1">Fixed Detect</option>
+                                <option value="2">Reversible defect</option>
                             </select>
                         </div> 
 
@@ -153,9 +153,13 @@
             <div class="btn-block">
                 <button type="submit" value="Submit" OnClick="getValue()";>Submit</button>
                 &nbsp;
-                <button class="reset" onclick="document.getElementById('input').value =''">Reset</button>
+                <button class="reset" onclick="document.getElementByClassName('input').value =''">Reset</button>
             </div>
         </form>
+    </div>
+    <!-- Link to view prediction history -->
+    <div class="his-link">
+        <a href="history.php"><button type="button" class="btn btn-secondary">Prediction History</button></a>
     </div>
 </body>
 </html>
