@@ -7,7 +7,11 @@
     
     <title>Form</title>
 </head>
-<body>
+<body >
+    <div class="container" style="color:#1979b4; margin-bottom: 100px;">
+        <h1 style="font-size: 70px; color:#1979b4; margin-top: 20px; margin-bottom: 100px;">Heart Disease Prediction</h1>
+    </div>
+
     <div class="container">
         <form class="form1" name="form1" onsubmit="check()" action="index.php" method="post"> 
             <div class="banner">
@@ -22,12 +26,12 @@
                 <div class="colums">
                     <div class="item">
                         <label for="fname">First Name<span>*</span></label>
-                        <input class="input" type="text" name="fname"/>
+                        <input class="input" type="text" name="fname" required/>
                     </div>
                     
                     <div class="item">
                         <label for="lname">Last Name<span>*</span></label>
-                        <input class="input" type="text" name="lname"/>
+                        <input class="input" type="text" name="lname" required/>
                     </div>
 
                     <div class="item">
@@ -39,7 +43,7 @@
 
                     <div class="item">
                         <label for="age">Age<span>*</span></label>
-                        <input class="input" type="number" name="age" min="20" max="80"/>
+                        <input class="input" type="number" name="age" min="20" max="100" required/>
                     </div>
                 </div>
             </fieldset>
@@ -64,7 +68,7 @@
                     <div class="item">
                         <label for="trestbps">Resting Blood Pressure<span>*</span></label>
                         <input class="input" type="number" name="trestbps" placeholder="Value of blood pressure in mmHg"
-                            min="70" max="220"/>
+                            min="70" max="220" required/>
                     </div>
 
                     <div class="item">
@@ -79,7 +83,7 @@
                     <div class="item">
                         <label for="chol">Serum Cholestrol<span>*</span></label>
                         <input class="input" type="number" name="chol" placeholder="Value of serum cholestrol in mg/dl"
-                            min="100" max="600"/>
+                            min="100" max="600" required/>
                     </div>
     
                     <div class="item">
@@ -95,7 +99,7 @@
                     <div class="item">
                         <label for="thalach">Maximum heart rate achieved<span>*</span></label>
                         <input class="input" type="number" name="thalach" placeholder="Value of maximum heart rate achieved"
-                            min="70" max="210"/>
+                            min="70" max="210" required/>
                     </div>
 
                     <div class="item">
@@ -109,7 +113,7 @@
                     <div class="item">
                         <label for="oldpeak">ST depression induced by exercise relative to rest<span>*</span></label>
                         <input class="input" type="number" name="oldpeak" placeholder="Value of ST depression"
-                            step="0.01" min="0" max="6.5"/>
+                            step="0.01" min="0" max="6.5" required/>
                     </div>
 
                     <div class="item">
@@ -153,13 +157,13 @@
             <div class="btn-block">
                 <button type="submit" value="Submit" OnClick="getValue()";>Submit</button>
                 &nbsp;
-                <button class="reset" onclick="document.getElementByClassName('input').value =''">Reset</button>
+                <input class="button" type="reset" value="Reset" >
             </div>
         </form>
     </div>
     <!-- Link to view prediction history -->
-    <div class="his-link">
-        <a href="history.php"><button type="button" class="btn btn-secondary">Prediction History</button></a>
+    <div class="his-link" style="text-align: center; margin-bottom: 50px;">
+        <a href="history.php" ><button type="button" class="btn btn-secondary">Prediction History</button></a>
     </div>
 </body>
 </html>

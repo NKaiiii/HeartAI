@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>History</title>
+    
 </head>
-<body>
-    <h1>Prediction History</h1>
+<body style="margin: 10px 20px 20px 10px;">
+    <h1 style="text-align: center; margin:50px;">Prediction History</h1>
     <?php include 'log.php' ?>
     <!-- create history table -->
     <div>
@@ -49,7 +50,7 @@
         </table>
     </div>
     <!-- Back button to index -->
-    <div>
+    <div style="text-align: center; margin-bottom: 50px;">
         <a href="index.html"><button type="button" class="btn btn-secondary">Back</button></a>
     </div>
 

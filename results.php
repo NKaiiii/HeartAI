@@ -17,6 +17,10 @@
                 <!-- inclue php file -->
                 <?php include 'results2.php'?>
             </div>
+
+            <div style="left: 45%">
+                <a href="index.html"><button type="button">Back</button></a>
+            </div>
         </form>
 
     </div>
